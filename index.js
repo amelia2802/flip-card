@@ -1,17 +1,13 @@
-import {mythCreature} from './data.js';
+import mythCreature from './data.js';
 
-console.log(mythCreature)
+console.log(mythCreature);
 
 const card = document.querySelector('.card');
 const cardBack = document.querySelector('.card-back');
 
-console.log(card)
-
-console.log(1+2)
-
 // Function to get a random index from the mythCreature array
 const getRandomIndex = () => Math.floor(Math.random() * mythCreature.length);
-console.log(getRandomIndex)
+console.log(getRandomIndex());  // Corrected to call the function
 
 // Function to set the background image of card-back with a random creature URL
 const setRandomCreatureBackground = () => {
@@ -25,9 +21,8 @@ const setRandomCreatureBackground = () => {
   }
 };
 
-
 // Event listener to trigger the setRandomCreatureBackground function on card hover
-card.addEventListener('mouseover', setRandomCreatureBackground);
+card.addEventListener('mouseenter', setRandomCreatureBackground);
 
 // Reset background image when the mouse leaves the card
 card.addEventListener('mouseleave', () => {
