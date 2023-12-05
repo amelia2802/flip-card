@@ -1,0 +1,52 @@
+body, html { 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+:root {
+  --jeopardy-blue: #060CE9;
+  --font-color-main: #fff;
+}
+
+
+.card{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 1rem 12rem;
+  text-align: center;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+}
+
+.card-front,.card-back{
+  width: 10rem;
+  height: 16rem;
+  padding: 1rem;
+  color: var(--font-color-main);
+  border-radius:15px;
+  font-size: 1.3rem;
+  position: absolute;
+   -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.card-front{
+  background: url("https://media.istockphoto.com/id/1345818642/vector/blue-mystical-background-with-stars-clouds-and-orbits-with-place-for-text-heavenly-boho.jpg?s=612x612&w=0&k=20&c=RAh-11TZO4KlPZIChL3J6dbVVXliDrLJMDUTKiOy1kA=");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card:hover{
+  transform: rotateY(180deg);
+}
+
+.card-back{
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+}
