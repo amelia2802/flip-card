@@ -2,6 +2,7 @@ import mythCreature from './data.js';
 
 console.log(mythCreature);
 
+console.log(1+2)
 const card = document.querySelector('.card');
 const cardBack = document.querySelector('.card-back');
 
